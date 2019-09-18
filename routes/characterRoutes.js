@@ -3,7 +3,7 @@ const router  = express.Router();
 const Character = require('../models/character')
 
 //List all characters
-router.get('/characters', (req, res, next)=>{
+router.get('/character', (req, res, next)=>{
 
   Character.find()
   .then((allCharacters)=>{
@@ -20,7 +20,7 @@ router.get('/character/create-new-character', (req, res, next)=>{
 })
 //Save creation
 router.post('/character/creation', (req, res, next)=>{
-  
+
 })
 
 
