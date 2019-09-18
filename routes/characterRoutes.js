@@ -25,11 +25,13 @@ router.post('/character/creation', (req, res, next) => {
 
   let firstName   = req.body.firstName;
   let lastName    = req.body.lastName;
+  let bio         = req.body.bio;
   let image       = req.body.image
 
   Character.create({
     firstName:  firstName,
     lastName:   lastName,
+    bio:        bio,
     image:      image
   })
   .then((result)=>{
