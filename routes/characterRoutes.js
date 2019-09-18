@@ -40,11 +40,11 @@ router.post('/character/creation', (req, res, next) => {
 })
 
 //Details Page
-router.get('/character/detail/:id', (req, res, next)=>{
+router.get('/character/details/:id', (req, res, next)=>{
   let id = req.params.id
   Character.findById(id)
   .then((characterObject)=>{
-    res.render('/character/detailsPage', {thatCharacter: characterObject})
+    res.render('character/detailsPage', {thatCharacter: characterObject})
   })
   .catch((err)=>{
     next(err)
