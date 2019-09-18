@@ -39,6 +39,18 @@ router.post('/character/creation', (req, res, next) => {
   })
 })
 
+//Details Page
+router.get('/character/detail/:id', (req, res, next)=>{
+  let id = req.params.id
+  Character.find(id)
+  .then((characterObject)=>{
+    res.render('/character/detailsPage', {thatCharacter: characterObject})
+  })
+  .catch((err)=>{
+    next(err)
+  })
+})
+
 
 
 
