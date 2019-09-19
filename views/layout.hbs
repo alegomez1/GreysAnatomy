@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
+
 <body>
 
-{{!-- Navbar --}}
-<nav class="navbar navbar-light navbar-expand-lg bg-light">
-<ul class="navbar-nav">
-  <li>
-    <a class="nav-link" href="/">Home</a>
-  </li>
-  <li>
-    <a class="nav-link" href="/character">Character List</a>
-  </li>
-    <li>
-    <a class="nav-link"  href="/character/create-new-character">Create Character</a>
-  </li>
-  <div class="nav-div">
-    <li>
-    <a class="nav-link-2 nav-link"  href="/account/signup">Sign Up</a>
-  </li>
+  {{!-- Navbar --}}
+  <nav class="navbar navbar-light navbar-expand-lg bg-light">
+    <ul class="navbar-nav">
+      <li>
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li>
+        <a class="nav-link" href="/character">Character List</a>
+      </li>
+      <li>
+        <a class="nav-link" href="/character/create-new-character">Create Character</a>
+      </li>
+      <div class="nav-div">
 
-    <li>
-    <a class="nav-link-2 nav-link"  href="/account/login">Login</a>
-  </li>
+        {{!-- Only show if logged out --}}
+        {{#unless theUser}}
+        <li>
+          <a class="nav-link-2 nav-link" href="/account/signup">Sign Up</a>
+        </li>
 
-      <form id="logout" action='/logout' method="POST">
-      <a class='navitems' onclick="document.getElementById('logout').submit();">Logout</a>
-    </form>
+        <li>
+          <a class="nav-link-2 nav-link" href="/account/login">Login</a>
+        </li>
+        {{/unless}}
+        {{!-- Only show if logged in --}}
+        {{#if theUser}}
+        <form id="logout" action='/logout' method="POST">
+          <a class='nav-link nav-link-2' onclick="document.getElementById('logout').submit();">Logout</a>
+        </form>
+        {{/if}}
 
+      </div>
+
+    </ul>
+  </nav>
+
+
+
+
+  {{#if theUser}}
+  <div>
+    <h1>Hello</h1>
   </div>
-
-</ul>
-</nav>
-
-
-
-
-{{#if theUser}}
-<div>
-  <h1>Hello</h1>
-</div>
-{{/if}}
+  {{/if}}
 
 
   {{{body}}}
 
   <script src="/javascripts/script.js"></script>
 </body>
+
 </html>
