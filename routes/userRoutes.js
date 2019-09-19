@@ -11,7 +11,22 @@ router.get('/account/signup', (req,res,next)=>{
 })
 //Save sign up creation
 router.post('/account/signup', (req, res, next)=>{
+  const username = req.body.theUsername;
+  const password = req.body.thePassword;
 
+  const salt = bcrypt.genSaltSync(10)
+  const hash = bcrypt.hashSync(password, salt)
+
+  User.create({
+    username: username,
+    password: hash
+  })
+  .then((result)=>{
+    res.redirect('/')
+  })
+  .catch((err)=>{
+    next(err)
+  })
 })
 
 
