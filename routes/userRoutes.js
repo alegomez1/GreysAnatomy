@@ -9,6 +9,7 @@ const passport = require('passport')
 router.get('/account/signup', (req,res,next)=>{
   res.render('account/signup')
 })
+
 //Save sign up creation
 router.post('/account/signup', (req, res, next)=>{
   const username = req.body.theUsername;
@@ -27,6 +28,11 @@ router.post('/account/signup', (req, res, next)=>{
   .catch((err)=>{
     next(err)
   })
+})
+
+//Login Page
+router.get('/account/login', (req, res, next)=>{
+  res.render('account/login')
 })
 
 
