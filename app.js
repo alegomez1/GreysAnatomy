@@ -64,6 +64,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+app.use(flash())
+
 passport.serializeUser((user, cb) => {
   cb(null, user._id);
 });
