@@ -15,6 +15,7 @@ const bcrypt       = require('bcryptjs')
 const session      = require('express-session')
 const MongoStore   = require('connect-mongo')(session)
 const flash        = require('connect-flash')
+const User         = require('./models/user')
 
 
 
@@ -67,6 +68,8 @@ app.use(passport.session());
 
 app.use(flash())
 
+
+
 passport.serializeUser((user, cb) => {
   cb(null, user._id);
 });
@@ -93,6 +96,7 @@ passport.use(new LocalStrategy((username, password, next) => {
     return next(null, user);
   });
 }));
+
 
 app.use((req,res,next)=>{
   res.locals.theUser = req.user;
