@@ -13,3 +13,14 @@
 </div>
 
 {{!-- Buttons --}}
+<div class="row details">
+  <div class="col">
+    <form action="/character/delete/{{thatCharacter.id}}" method="POST">
+      <button>Delete</button>
+    </form>
+
+        <form action="/character/edit/{{thatCharacter.id}}" method="POST">
+      <button>Edit</button>
+    </form>
+  </div>
+</div>

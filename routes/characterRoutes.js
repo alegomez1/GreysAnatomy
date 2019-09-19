@@ -52,7 +52,7 @@ router.get('/character/details/:id', (req, res, next)=>{
 })
 
 //Delete Section
-router.post('character/delete/:id', (req,res,next)=>{
+router.post('/character/delete/:id', (req,res,next)=>{
   let id = req.params.id
   Character.findOneAndRemove(id)
   .then((result)=>{
