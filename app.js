@@ -10,8 +10,10 @@ const logger       = require('morgan');
 const path         = require('path');
 const passport     = require('passport')
 const LocalStrategy= require('passport-local').Strategy
-const User         = require('./models/user')
+// const User         = require('./models/user')
 const bcrypt       = require('bcryptjs')
+const session      = require('express-session')
+const MongoStore   = require('connect-mongo')(session)
 
 
 
@@ -97,5 +99,7 @@ app.use('/', index);
 const characterRoutes = require('./routes/characterRoutes')
 app.use('/', characterRoutes)
 
+const userRoutes = require('./routes/userRoutes')
+app.use('/', userRoutes)
 
 module.exports = app;
