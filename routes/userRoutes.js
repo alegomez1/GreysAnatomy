@@ -42,6 +42,12 @@ router.post("/account/login", passport.authenticate("local", {
   passReqToCallback: true
 }));
 
+//Logout
+router.post('/logout', (req, res, next)=>{
+  req.session.destroy();
+  res.redirect('/')
+})
+
 //Google
 router.get(
   "/auth/google",
