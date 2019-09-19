@@ -14,6 +14,7 @@ const LocalStrategy= require('passport-local').Strategy
 const bcrypt       = require('bcryptjs')
 const session      = require('express-session')
 const MongoStore   = require('connect-mongo')(session)
+const flash        = require('connect-flash')
 
 
 
@@ -89,6 +90,14 @@ passport.use(new LocalStrategy((username, password, next) => {
     return next(null, user);
   });
 }));
+
+app.use((req,res,next)=>{
+  res.locals.theUser = req.user;
+  res.locals.errorMessage = req.flash('error', 'try again')
+
+  next();
+})
+//creating a universal variable inside of all HBS files
 
 
 

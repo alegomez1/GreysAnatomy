@@ -35,6 +35,13 @@ router.get('/account/login', (req, res, next)=>{
   res.render('account/login')
 })
 
+router.post("/account/login", passport.authenticate("local", {
+  successRedirect: "/",
+  failureRedirect: "/account/login",
+  failureFlash: true,
+  passReqToCallback: true
+}));
+
 
 
 module.exports = router
