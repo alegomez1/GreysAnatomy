@@ -7,13 +7,6 @@ a {
 .parent {
   display: flex; }
 
-.profileImage {
-  width: 400px;
-  margin-left: 20px; }
-
-.details {
-  margin-top: 30px; }
-
 .bg-photo {
   background-image: url("../images/Seattle.jpg");
   background-size: cover;
@@ -27,16 +20,6 @@ a {
 
 .header {
   margin: 0 0 0 20px; }
-
-.name {
-  font-size: 30px;
-  font-weight: 100;
-  margin: 20px 0 0 50px;
-  padding: 0 0 30px 0; }
-
-.bio {
-  margin-right: 300px;
-  line-height: 40px; }
 
 .nav-div {
   display: flex;
@@ -94,5 +77,26 @@ a {
   margin-top: 30px;
   width: 200px;
   border: none; }
+
+.details {
+  margin: 30px 20px 0 20px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9; }
+
+.profileImage {
+  width: 500px;
+  margin-left: 20px; }
+
+.name {
+  font-size: 30px;
+  font-weight: 100;
+  margin: 20px 0 0 50px;
+  padding: 0 0 30px 0; }
+
+.bio {
+  margin-right: 40px;
+  line-height: 40px; }
 
 /*# sourceMappingURL=style.css.map */
