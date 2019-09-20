@@ -68,13 +68,17 @@ width: 1100px
 }
 .formCont{
   // border: 2px solid blue;
-  background-color: #f4f4f4;
+  background-color: #f9f9f9;
   border-radius: 10px;
   margin-top: 40px;
   width: 350px;
   height: 400px;
   display: grid;
   justify-content: center;
+
+  -webkit-box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
+  -moz-box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
+  box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
 }
 .center-div{
   // border: 2px solid red;

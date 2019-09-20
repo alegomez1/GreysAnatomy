@@ -1,4 +1,31 @@
-<h1>Login</h1>
+<div class="myCont">
+
+    <h1 class='signUp'>Login</h1>
+    <div class="formCont">
+        <form action="/account/login" method="POST">
+
+            <p class="form-text">Username</p>
+            <input class="form-control" type="text" name="username">
+
+            <p class="form-text">Password</p>
+            <input class="form-control" type="password" name="password">
+
+            <br>
+            <div class='center-div'>
+                <button class="btn btn-outline-dark my-button">Submit</button>
+
+        </form>
+
+        <a href="/auth/google">
+        <img class="google-image" src="/images/google-image-2.png" alt="Sign In With Google">
+        </a>
+    </div>
+</div>
+</div>
+
+
+
+{{!-- <h1>Login</h1>
 <form action="/account/login" method="POST">
 
 <p>Username</p>
@@ -9,4 +36,4 @@
 
 <button>Login</button>
 </form>
-<a href="/auth/google">Login With Google</a>
+<a href="/auth/google">Login With Google</a> --}}
