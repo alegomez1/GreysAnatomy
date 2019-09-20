@@ -68,8 +68,11 @@ width: 1100px
 }
 .formCont{
   // border: 2px solid blue;
+  background-color: #f4f4f4;
+  border-radius: 10px;
   margin-top: 40px;
-  width: 300px;
+  width: 350px;
+  height: 400px;
   display: grid;
   justify-content: center;
 }
@@ -86,11 +89,18 @@ width: 1100px
   font-size: 60px
 }
 .form-text{
+  margin-top: 30px;
   font-size: 15px;
   font-weight: 500
 }
 .my-button{
+  margin-top: 20px;
   width: 80px;
 justify-self: center;
 
+}
+.google-image{
+  margin-top: 30px;
+  width: 200px;
+  border: none;
 }
