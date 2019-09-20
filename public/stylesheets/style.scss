@@ -48,6 +48,49 @@ display: flex;
 justify-content: flex-end;
 width: 1100px
 }
+.nav-link{
+  padding: 10px 0
+}
 .nav-link-2:hover{
   cursor: pointer;
+}
+.padding{
+  padding: 15px 0 0 0
+}
+
+// Sign-up/Login Styles
+
+.myCont{
+  height: 300px;
+  // border: 2px solid black;
+  display: grid;
+  justify-content: center;
+}
+.formCont{
+  // border: 2px solid blue;
+  margin-top: 40px;
+  width: 300px;
+  display: grid;
+  justify-content: center;
+}
+.center-div{
+  // border: 2px solid red;
+  width: 300px;
+  display: grid;
+  justify-content: center
+}
+.signUp{
+  margin-top: 30px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 60px
+}
+.form-text{
+  font-size: 15px;
+  font-weight: 500
+}
+.my-button{
+  width: 80px;
+justify-self: center;
+
 }

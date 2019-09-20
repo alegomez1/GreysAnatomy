@@ -1,16 +1,22 @@
-<h1>Sign Up</h1>
+<div class="myCont">
 
+    <h1 class='signUp'>Sign Up</h1>
+    <div class="formCont">
+        <form action="/account/signup" method="POST">
 
-<form action="/account/signup" method="POST">
+            <p class="form-text">Username</p>
+            <input class="form-control" type="text" name="theUsername">
 
-<p>Username</p>
-<input type="text" name="theUsername">
+            <p class="form-text">Password</p>
+            <input class="form-control" type="password" name="thePassword">
 
-<p>Password</p>
-<input type="password" name="thePassword">
+            <br>
+            <div class='center-div'>
+                <button class="btn btn-outline-dark my-button">Submit</button>
 
-<button>Submit</button>
+        </form>
 
-</form>
-
-    <a href="/auth/google">Signup With Google</a>
+        <a href="/auth/google">Signup With Google</a>
+    </div>
+</div>
+</div>

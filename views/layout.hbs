@@ -39,6 +39,7 @@
         {{/unless}}
         {{!-- Only show if logged in --}}
         {{#if theUser}}
+        {{!-- <p class="nav-link">{{theUser.username}}</p> --}}
         <form id="logout" action='/logout' method="POST">
           <a class='nav-link nav-link-2' onclick="document.getElementById('logout').submit();">Logout</a>
         </form>
@@ -48,15 +49,6 @@
 
     </ul>
   </nav>
-
-
-
-
-  {{#if theUser}}
-  <div>
-    <h1>Hello</h1>
-  </div>
-  {{/if}}
 
 
   {{{body}}}
