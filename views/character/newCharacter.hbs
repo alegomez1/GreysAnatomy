@@ -1,7 +1,31 @@
-
 <div class="myCont">
-<h1>Create new character</h1>
+  <h1>Create new character</h1>
 
+  <div class="newCharacterForm">
+
+    <form action="/character/creation" method="POST">
+
+      <p class="form-text">First Name</p>
+
+      <input class="form-control" type="text" name="firstName">
+      
+      <p class="form-text">Last Name</p>
+      
+      <input class="form-control" type="text" name="lastName">
+      
+      <p class="form-text">About</p>
+      
+      <input class="form-control about-form" type="text" name="bio">
+      
+      <p class="form-text">Image</p>
+      
+      <input class="form-control" type="text" name="image">
+      
+      <button class="btn btn-outline-dark my-button">Submit</button>
+
+    </form>
+
+  </div>
 
 
 

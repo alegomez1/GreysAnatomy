@@ -92,6 +92,11 @@ justify-self: center;
   border: none;
 }
 
+//Create New Character Page
+.about-form{
+  height: 100px
+}
+
 
 
 //Character Details Page
@@ -106,7 +111,6 @@ justify-self: center;
   -webkit-box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
   -moz-box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
   box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
-
 }
 .profileImage{
 width: 500px;
@@ -126,3 +130,4 @@ margin-left: 20px;
   margin-right: 40px;
 line-height: 40px
 }
+
