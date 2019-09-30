@@ -112,9 +112,12 @@ justify-self: center;
   -moz-box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
   box-shadow: -4px 6px 2px -3px rgba(0,0,0,0.31);
 }
+.image-div{
+  display: flex;
+  justify-content: center
+}
 .profileImage{
-width: 500px;
-margin-left: 20px;
+width: 300px;
 }
 .name{
   font-size: 30px;
